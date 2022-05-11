@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 import sys, os 
-sys.path.append(os.path.abspath(os.path.join('../scripts')))
+sys.path.append('../scripts')
 from load_data import LoadData
 
 class TestLoadData(unittest.TestCase):
