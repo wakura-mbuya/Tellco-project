@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 import sys, os 
-sys.path.append('../scripts')
+sys.path.append('./scripts')
 from load_data import LoadData
 
 class TestLoadData(unittest.TestCase):
@@ -16,7 +16,7 @@ class TestLoadData(unittest.TestCase):
 
     def setUp(self) -> pd.DataFrame:
         loader = LoadData()
-        self.df = loader.read_excel('../data/Week1_challenge_data_source.xlsx')
+        self.df = loader.read_excel('./data/Week1_challenge_data_source.xlsx')
         
     def test_read_excel(self):
         self.assertEqual(self.df.columns.tolist(), ['Bearer Id','Start','Start ms','End','End ms','Dur. (ms)','IMSI',
